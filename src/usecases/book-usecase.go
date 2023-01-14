@@ -10,7 +10,7 @@ type BookInteractor struct {
 	BookRepository domain.BookRepository
 }
 
-func NewInteractor(repository domain.BookRepository) BookInteractor {
+func NewBookInteractor(repository domain.BookRepository) BookInteractor {
 	return BookInteractor{repository}
 }
 

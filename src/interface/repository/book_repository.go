@@ -14,7 +14,7 @@ func (repo BookRepo) SaveBook(book domain.Book) error {
 	return repo.handler.SaveBook(book)
 }
 
-func (repo BookRepo) FindAllBooks() ([]*domain.Book, error) {
+func (repo BookRepo) FindAll() ([]*domain.Book, error) {
 	results, err := repo.handler.FindAllBooks()
 	if err != nil {
 		return results, err

@@ -16,7 +16,7 @@ func NewBookController(bookInteractor usecases.BookInteractor) *BookController {
 	return &BookController{bookInteractor}
 }
 
-func (controller *BookController) Add(res http.ResponseWriter, req http.Request) {
+func (controller *BookController) Add(res http.ResponseWriter, req *http.Request) {
 	res.Header().Set("Content-Type", "application/json")
 
 	var book domain.Book
@@ -37,7 +37,7 @@ func (controller *BookController) Add(res http.ResponseWriter, req http.Request)
 	res.WriteHeader(http.StatusOK)
 }
 
-func (controller *BookController) FindAll(res http.ResponseWriter, req http.Request) {
+func (controller *BookController) FindAll(res http.ResponseWriter, req *http.Request) {
 	res.Header().Set("Content-Type", "application/json")
 
 	results, err := controller.bookInteractor.FindAll()

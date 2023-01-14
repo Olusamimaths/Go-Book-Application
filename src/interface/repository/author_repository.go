@@ -10,6 +10,6 @@ func NewAuthorRepo(handler DBHandler) AuthorRepo {
 	return AuthorRepo{handler}
 } 
 
-func (repo AuthorRepo) CreateAuthor(author domain.Author) error {
+func (repo AuthorRepo) SaveAuthor(author domain.Author) error {
 	return repo.handler.SaveAuthor(author)
 }
