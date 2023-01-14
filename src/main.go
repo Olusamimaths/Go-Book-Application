@@ -50,7 +50,7 @@ func main() {
 	httpRouter.POST("/book/add", bookController.Add)
 	httpRouter.GET("/book", bookController.FindAll)
 
-	httpRouter.POST("/author", authorController.Add)
+	httpRouter.POST("/author/add", authorController.Add)
 
 	httpRouter.SERVE(":8080")
 }
